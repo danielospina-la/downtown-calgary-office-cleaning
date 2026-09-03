@@ -29,7 +29,7 @@ export default function WhyUs() {
           <p className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-electric">
             Why Us
           </p>
-          <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mt-3 font-heading text-5xl font-bold leading-[0.95] tracking-tight text-navy sm:text-6xl">
             Structured, precise, unfussy
           </h2>
         </div>

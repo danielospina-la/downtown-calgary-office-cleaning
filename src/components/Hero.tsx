@@ -9,7 +9,7 @@ export default function Hero() {
           <p className="mb-4 font-heading text-sm font-medium uppercase tracking-[0.2em] text-electric">
             Downtown Calgary &amp; Surrounding Areas
           </p>
-          <h1 className="font-heading text-4xl font-semibold leading-[1.1] tracking-tight text-navy sm:text-5xl">
+          <h1 className="font-heading text-5xl font-bold leading-[1.05] tracking-tight text-navy sm:text-6xl">
             We clean your office in Downtown Calgary.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-8 text-charcoal">

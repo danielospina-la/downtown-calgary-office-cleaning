@@ -18,7 +18,7 @@ export default function ServiceAreas() {
           <p className="font-heading text-sm font-medium uppercase tracking-[0.2em] text-electric">
             Areas We Serve
           </p>
-          <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mt-3 font-heading text-4xl font-bold leading-[1.05] tracking-tight text-navy sm:text-5xl">
             Downtown Calgary and the neighborhoods around it
           </h2>
           <p className="mt-4 text-lg leading-8 text-charcoal">
