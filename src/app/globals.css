@@ -19,8 +19,8 @@
   --color-electric: var(--color-electric);
   --color-light-gray: var(--color-light-gray);
   --color-steel: var(--color-steel);
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-space-grotesk);
+  --font-sans: var(--font-poppins);
+  --font-heading: var(--font-poppins);
 }
 
 body {
