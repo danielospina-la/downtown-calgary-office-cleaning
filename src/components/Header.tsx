@@ -1,5 +1,3 @@
-import Skyline from "./Skyline";
-
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Areas We Serve", href: "#areas" },
@@ -9,7 +7,7 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-white">
+    <header className="sticky top-0 z-50 border-b border-steel bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-10">
         <a
           href="#top"
@@ -38,10 +36,6 @@ export default function Header() {
           Get a Quote
         </a>
       </div>
-      <Skyline
-        className="h-4 w-full text-steel"
-        strokeColor="currentColor"
-      />
     </header>
   );
 }

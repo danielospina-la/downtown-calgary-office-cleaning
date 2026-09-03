@@ -1,10 +1,7 @@
-import Skyline from "./Skyline";
-
 export default function Footer() {
   return (
     <footer className="bg-navy">
-      <Skyline className="h-10 w-full text-steel/40" strokeColor="currentColor" />
-      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 pb-10 sm:flex-row sm:items-center sm:px-10">
+      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-10 sm:flex-row sm:items-center sm:px-10">
         <p className="font-heading text-sm font-semibold text-white">
           Downtown Calgary Office Cleaning
         </p>

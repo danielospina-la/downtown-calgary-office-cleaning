@@ -1,10 +1,8 @@
-import Skyline from "./Skyline";
-
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden border-b border-steel bg-white"
+      className="border-b border-steel bg-white"
     >
       <div className="mx-auto max-w-6xl px-6 pt-20 pb-28 sm:px-10 sm:pt-28 sm:pb-36">
         <div className="max-w-xl">
@@ -36,12 +34,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Bold skyline moment anchoring the hero */}
-      <Skyline
-        className="absolute inset-x-0 bottom-0 h-24 w-full text-navy/90 sm:h-32"
-        strokeColor="currentColor"
-      />
     </section>
   );
 }
