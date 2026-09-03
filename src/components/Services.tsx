@@ -1,3 +1,5 @@
+import DotRow from "./DotRow";
+
 const CORE_SERVICES = [
   "Nightly Office Cleaning",
   "Trash & Recycling Removal",
@@ -48,23 +50,6 @@ function ArrowRightIcon() {
   );
 }
 
-function ChevronIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-5 w-5 shrink-0 text-steel transition-colors group-hover:text-electric"
-      aria-hidden="true"
-    >
-      <path d="M9 6l6 6-6 6" />
-    </svg>
-  );
-}
-
 export default function Services() {
   return (
     <section id="services" className="bg-light-gray py-24 sm:py-32">
@@ -92,19 +77,7 @@ export default function Services() {
 
         <div className="mt-14 max-w-2xl">
           {CORE_SERVICES.map((service) => (
-            <a
-              key={service}
-              href="#contact"
-              className="group flex items-center justify-between gap-4 border-b border-steel/60 py-5 first:border-t"
-            >
-              <span className="flex items-center gap-4">
-                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-electric" />
-                <span className="font-heading text-lg font-semibold text-navy sm:text-xl">
-                  {service}
-                </span>
-              </span>
-              <ChevronIcon />
-            </a>
+            <DotRow key={service} label={service} href="#contact" />
           ))}
         </div>
 
