@@ -47,27 +47,27 @@ export default function ContactForm() {
         name="name"
         placeholder="Your name"
         required
-        className="rounded-md border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900"
+        className="rounded-md border border-steel bg-white px-4 py-3 text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none"
       />
       <input
         type="email"
         name="email"
         placeholder="Your email"
         required
-        className="rounded-md border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900"
+        className="rounded-md border border-steel bg-white px-4 py-3 text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none"
       />
       <input
         type="tel"
         name="phone"
         placeholder="Phone (optional)"
-        className="rounded-md border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900"
+        className="rounded-md border border-steel bg-white px-4 py-3 text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none"
       />
       <textarea
         name="message"
         placeholder="Tell us about your office and cleaning needs"
         required
         rows={4}
-        className="rounded-md border border-zinc-300 px-4 py-2 dark:border-zinc-700 dark:bg-zinc-900"
+        className="rounded-md border border-steel bg-white px-4 py-3 text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none"
       />
       {/* Honeypot field to reduce spam */}
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -75,19 +75,19 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="rounded-full bg-foreground px-5 py-3 font-medium text-background transition-colors hover:bg-[#383838] disabled:opacity-60 dark:hover:bg-[#ccc]"
+        className="rounded-full bg-electric px-5 py-3.5 font-semibold text-white transition-colors hover:bg-white hover:text-navy disabled:opacity-60"
       >
         {status === "submitting" ? "Sending..." : "Request a Quote"}
       </button>
 
       {status === "success" && (
-        <p className="text-sm text-green-600 dark:text-green-400">
-          Thanks! We'll be in touch shortly.
+        <p className="text-sm font-medium text-white">
+          Thanks! We&apos;ll be in touch shortly.
         </p>
       )}
       {status === "error" && (
-        <p className="text-sm text-red-600 dark:text-red-400">
-          Something went wrong. Please try again or call us directly.
+        <p className="text-sm font-medium text-white">
+          Something went wrong. Please try again or reach out directly.
         </p>
       )}
     </form>

@@ -1,20 +1,23 @@
-import ContactForm from "@/components/ContactForm";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import ServiceAreas from "@/components/ServiceAreas";
+import WhyUs from "@/components/WhyUs";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center gap-10 py-32 px-16 bg-white dark:bg-black">
-        <div className="flex flex-col items-center gap-4 text-center">
-          <h1 className="max-w-lg text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Downtown Calgary Office Cleaning
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Site under construction — content and design coming soon. Contact
-            form below is live and wired up for testing.
-          </p>
-        </div>
-        <ContactForm />
+    <div className="flex flex-1 flex-col">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        <Services />
+        <ServiceAreas />
+        <WhyUs />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
