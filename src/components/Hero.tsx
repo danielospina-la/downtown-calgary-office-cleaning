@@ -10,8 +10,7 @@ export default function Hero() {
             Downtown Calgary &amp; Surrounding Areas
           </p>
           <h1 className="font-heading text-4xl font-semibold leading-[1.1] tracking-tight text-navy sm:text-5xl">
-            Precision office cleaning for the buildings that define this
-            city.
+            We clean your office in Downtown Calgary.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-8 text-charcoal">
             Nightly janitorial, sanitizing, and specialty cleaning for
