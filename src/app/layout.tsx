@@ -8,10 +8,33 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+const SITE_URL = "https://downtown-calgary-office-cleaning.vercel.app";
+const TITLE = "Office Cleaning Services in Downtown Calgary | Free Quotes";
+const DESCRIPTION =
+  "Nightly janitorial, sanitizing & specialty office cleaning in Downtown Calgary. Insured & bonded, flexible after-hours scheduling. Get a free quote today.";
+
 export const metadata: Metadata = {
-  title: "Downtown Calgary Office Cleaning",
-  description:
-    "Precision office cleaning for Downtown Calgary and surrounding communities. Nightly janitorial, sanitizing, and specialty cleaning built around your schedule.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: "%s | Downtown Calgary Office Cleaning",
+  },
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: "Downtown Calgary Office Cleaning",
+    locale: "en_CA",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
