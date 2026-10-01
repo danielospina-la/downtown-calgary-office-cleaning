@@ -1,15 +1,42 @@
 import DotRow from "./DotRow";
 
-const AREAS = [
-  "Downtown Core",
-  "Beltline",
-  "Eau Claire",
-  "East Village",
-  "Mission",
-  "Kensington / Hillhurst",
-  "Inglewood",
-  "Chinatown",
-  "Bridgeland",
+const AREAS: { name: string; blurb: string }[] = [
+  {
+    name: "Downtown Core",
+    blurb: "Nightly janitorial for towers and offices in the heart of Calgary.",
+  },
+  {
+    name: "Beltline",
+    blurb: "Office cleaning for Beltline businesses, on your schedule.",
+  },
+  {
+    name: "Eau Claire",
+    blurb: "Reliable cleaning for Eau Claire offices and commercial spaces.",
+  },
+  {
+    name: "East Village",
+    blurb: "Janitorial services for East Village's growing office community.",
+  },
+  {
+    name: "Mission",
+    blurb: "Office cleaning for Mission businesses, after hours.",
+  },
+  {
+    name: "Kensington / Hillhurst",
+    blurb: "Cleaning services for Kensington and Hillhurst offices.",
+  },
+  {
+    name: "Inglewood",
+    blurb: "Trusted office cleaning for Inglewood's shops and workspaces.",
+  },
+  {
+    name: "Chinatown",
+    blurb: "Janitorial cleaning for Chinatown offices and storefronts.",
+  },
+  {
+    name: "Bridgeland",
+    blurb: "Office cleaning for Bridgeland businesses of every size.",
+  },
 ];
 
 export default function ServiceAreas() {
@@ -22,9 +49,20 @@ export default function ServiceAreas() {
           Serve
         </h2>
 
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-charcoal">
+          We provide office cleaning across Downtown Calgary and nearby
+          neighbourhoods — from nightly janitorial in the Downtown Core to
+          recurring cleaning for offices in Beltline, Kensington and beyond.
+        </p>
+
         <div className="mt-14 max-w-2xl">
           {AREAS.map((area) => (
-            <DotRow key={area} label={area} href="#contact" />
+            <DotRow
+              key={area.name}
+              label={area.name}
+              sublabel={area.blurb}
+              href="#contact"
+            />
           ))}
         </div>
 
