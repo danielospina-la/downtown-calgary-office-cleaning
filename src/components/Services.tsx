@@ -1,33 +1,40 @@
 import PillCTA from "./PillCTA";
 
-const CORE_SERVICES: { name: string; desc: string }[] = [
+const CORE_SERVICES: { name: string; desc: string; icon: string }[] = [
   {
     name: "Nightly Office Cleaning",
     desc: "After-hours janitorial cleaning that leaves your office spotless for every workday.",
+    icon: "/icons/icon-nightly-office-cleaning.webp",
   },
   {
     name: "Trash & Recycling Removal",
     desc: "Daily waste and recycling pickup, sorted and handled responsibly.",
+    icon: "/icons/icon-trash-recycling-removal.webp",
   },
   {
     name: "Kitchen & Breakroom Cleaning",
     desc: "Counters, appliances and floors kept fresh for your team.",
+    icon: "/icons/icon-kitchen-breakroom-cleaning.webp",
   },
   {
     name: "Restroom Cleaning & Sanitizing",
     desc: "Thorough restroom cleaning and sanitizing for staff and visitors.",
+    icon: "/icons/icon-restroom-cleaning-sanitizing.webp",
   },
   {
     name: "Vacuuming & Floor Mopping",
     desc: "Carpets vacuumed and hard floors mopped to a clean finish.",
+    icon: "/icons/icon-vacuuming-floor-mopping.webp",
   },
   {
     name: "Dusting & Surface Wiping",
     desc: "Desks, shelves and surfaces dusted and wiped down.",
+    icon: "/icons/icon-dusting-surface-wiping.webp",
   },
   {
     name: "High-Touch Disinfection",
     desc: "Doorknobs, switches and shared surfaces disinfected to cut germs.",
+    icon: "/icons/icon-hightouch-disinfection.webp",
   },
 ];
 
@@ -49,9 +56,11 @@ const SPECIALTY_SERVICES: { name: string; desc: string }[] = [
 function ServiceRow({
   name,
   desc,
+  icon,
 }: {
   name: string;
   desc: string;
+  icon?: string;
 }) {
   return (
     <a
@@ -59,7 +68,17 @@ function ServiceRow({
       className="group flex items-center justify-between gap-4 border-b border-steel/60 py-5 first:border-t"
     >
       <span className="flex items-start gap-4">
-        <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-electric" />
+        {icon ? (
+          <img
+            src={icon}
+            alt=""
+            width={64}
+            height={64}
+            className="h-16 w-16 shrink-0 rounded-full ring-2 ring-navy/15"
+          />
+        ) : (
+          <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-electric" />
+        )}
         <span>
           <h3 className="block font-heading text-lg font-semibold text-navy sm:text-xl">
             {name}
@@ -105,6 +124,7 @@ export default function Services() {
               key={service.name}
               name={service.name}
               desc={service.desc}
+              icon={service.icon}
             />
           ))}
         </div>
