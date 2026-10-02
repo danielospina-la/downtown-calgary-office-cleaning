@@ -6,7 +6,8 @@
 
   --color-navy: #1e5aa8;
   --color-charcoal: #3d3d3d;
-  --color-electric: #f97316;
+  --color-electric: #1e5aa8;
+  --color-accent: #f97316;
   --color-light-gray: #ffffff;
   --color-steel: #c9d6ea;
 }
@@ -17,10 +18,11 @@
   --color-navy: var(--color-navy);
   --color-charcoal: var(--color-charcoal);
   --color-electric: var(--color-electric);
+  --color-accent: var(--color-accent);
   --color-light-gray: var(--color-light-gray);
   --color-steel: var(--color-steel);
   --font-sans: var(--font-poppins);
-  --font-heading: var(--font-rye);
+  --font-heading: var(--font-graduate);
 }
 
 body {
