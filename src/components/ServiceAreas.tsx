@@ -62,6 +62,7 @@ export default function ServiceAreas() {
               label={area.name}
               sublabel={area.blurb}
               href="/contact"
+              icon="/icons/bullet-area-pin.webp"
             />
           ))}
         </div>
