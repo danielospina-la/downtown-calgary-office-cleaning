@@ -11,17 +11,14 @@ export default function Footer() {
   return (
     <footer className="border-t border-steel bg-white">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="#top" className="inline-block">
           <Image
-            src="/logo.webp"
+            src="/logo-full.webp"
             alt="D.C.O.C. — Downtown Calgary Office Cleaning"
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded-full"
+            width={320}
+            height={326}
+            className="h-44 w-auto"
           />
-          <span className="font-heading text-3xl font-extrabold leading-[0.95] tracking-tight text-navy sm:text-4xl">
-            D.C.O.C.
-          </span>
         </a>
         <p className="mt-4 text-sm text-charcoal">
           Downtown Calgary Office Cleaning — nightly janitorial, sanitizing and
