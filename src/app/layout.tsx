@@ -50,7 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${poppins.variable} ${oswald.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans text-charcoal">
+      <body className="min-h-full flex flex-col font-sans text-navy">
         {children}
       </body>
     </html>
