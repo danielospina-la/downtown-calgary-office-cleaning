@@ -78,12 +78,12 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="group mt-2 flex items-center justify-between gap-6 rounded-full bg-electric py-2 pr-2 pl-6 transition-colors hover:bg-navy disabled:opacity-60"
+        className="group mt-2 flex items-center justify-between gap-6 rounded-full bg-accent py-2 pr-2 pl-6 transition-colors hover:bg-navy disabled:opacity-60"
       >
         <span className="font-heading text-sm font-semibold text-white sm:text-base">
           {status === "submitting" ? "Sending..." : "Request a Quote"}
         </span>
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-electric transition-colors group-hover:bg-white group-hover:text-navy">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-accent transition-colors group-hover:bg-white group-hover:text-navy">
           <svg
             viewBox="0 0 24 24"
             fill="none"
