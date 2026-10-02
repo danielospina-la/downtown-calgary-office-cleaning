@@ -53,14 +53,41 @@ const SPECIALTY_SERVICES: { name: string; desc: string }[] = [
   },
 ];
 
-function ServiceRow({
+function ServiceCard({
   name,
   desc,
   icon,
 }: {
   name: string;
   desc: string;
-  icon?: string;
+  icon: string;
+}) {
+  return (
+    <a
+      href="/contact"
+      className="group flex flex-col items-center rounded-3xl border border-steel/60 bg-white p-5 text-center transition-colors hover:border-navy sm:p-8"
+    >
+      <img
+        src={icon}
+        alt=""
+        width={96}
+        height={96}
+        className="h-20 w-20 shrink-0 rounded-full ring-2 ring-navy/15 sm:h-24 sm:w-24"
+      />
+      <h3 className="mt-4 block font-heading text-base font-semibold text-navy sm:text-xl">
+        {name}
+      </h3>
+      <span className="mt-2 block text-sm leading-6 text-navy">{desc}</span>
+    </a>
+  );
+}
+
+function ServiceRow({
+  name,
+  desc,
+}: {
+  name: string;
+  desc: string;
 }) {
   return (
     <a
@@ -68,17 +95,7 @@ function ServiceRow({
       className="group flex items-center justify-between gap-4 border-b border-steel/60 py-5 first:border-t"
     >
       <span className="flex items-start gap-4">
-        {icon ? (
-          <img
-            src={icon}
-            alt=""
-            width={64}
-            height={64}
-            className="h-16 w-16 shrink-0 rounded-full ring-2 ring-navy/15"
-          />
-        ) : (
-          <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-electric" />
-        )}
+        <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-electric" />
         <span>
           <h3 className="block font-heading text-lg font-semibold text-navy sm:text-xl">
             {name}
@@ -118,9 +135,9 @@ export default function Services() {
           <PillCTA label="Not sure what you need?" href="/contact" />
         </div>
 
-        <div className="mt-14 max-w-2xl">
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6">
           {CORE_SERVICES.map((service) => (
-            <ServiceRow
+            <ServiceCard
               key={service.name}
               name={service.name}
               desc={service.desc}
