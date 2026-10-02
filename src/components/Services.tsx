@@ -65,7 +65,7 @@ function ServiceCard({
   return (
     <a
       href="/contact"
-      className="group flex flex-col items-center rounded-3xl border border-steel/60 bg-white p-5 text-center transition-colors hover:border-navy sm:p-8"
+      className="group flex flex-col items-center p-5 text-center sm:p-8"
     >
       <img
         src={icon}
