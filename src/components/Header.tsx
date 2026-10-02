@@ -62,12 +62,12 @@ export default function Header() {
         {/* Desktop CTA */}
         <a
           href="#contact"
-          className="group hidden items-center gap-3 rounded-full bg-electric py-1.5 pr-1.5 pl-5 md:flex"
+          className="hidden items-center gap-3 rounded-full bg-navy py-1.5 pr-1.5 pl-5 transition-colors hover:bg-navy/90 md:flex"
         >
           <span className="font-heading text-sm font-medium text-white">
             Get a Quote
           </span>
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-electric transition-colors group-hover:bg-navy group-hover:text-white">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-navy">
             <ArrowRightIcon />
           </span>
         </a>
@@ -115,7 +115,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-electric py-3 text-center font-heading text-sm font-semibold text-white"
+              className="mt-4 rounded-full bg-navy py-3 text-center font-heading text-sm font-semibold text-white"
             >
               Get a Quote
             </a>
