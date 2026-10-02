@@ -22,7 +22,7 @@
   --color-light-gray: var(--color-light-gray);
   --color-steel: var(--color-steel);
   --font-sans: var(--font-poppins);
-  --font-heading: var(--font-graduate);
+  --font-heading: var(--font-oswald);
 }
 
 body {
