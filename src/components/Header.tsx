@@ -4,10 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 
 const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Areas We Serve", href: "#areas" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Areas We Serve", href: "/areas-we-serve" },
+  { label: "Why Us", href: "/why-us" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function ArrowRightIcon() {
@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-steel bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
-        <a href="#top" className="flex items-center">
+        <a href="/" className="flex items-center">
           <Image
             src="/logo-navbar.webp"
             alt="Downtown Calgary Office Cleaning"
@@ -49,7 +49,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="font-heading text-sm font-medium text-charcoal transition-colors hover:text-navy"
+              className="font-heading text-sm font-medium text-navy transition-colors hover:text-navy"
             >
               {link.label}
             </a>
@@ -58,7 +58,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <a
-          href="#contact"
+          href="/contact"
           className="hidden items-center gap-3 rounded-full bg-navy py-1.5 pr-1.5 pl-5 transition-colors hover:bg-navy/90 md:flex"
         >
           <span className="font-heading text-sm font-medium text-white">
@@ -110,7 +110,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/contact"
               onClick={() => setOpen(false)}
               className="mt-4 rounded-full bg-navy py-3 text-center font-heading text-sm font-semibold text-white"
             >
