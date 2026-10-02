@@ -1,17 +1,17 @@
 import Image from "next/image";
 
 const NAV_LINKS = [
-  { label: "Services", href: "#services" },
-  { label: "Areas We Serve", href: "#areas" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Areas We Serve", href: "/areas-we-serve" },
+  { label: "Why Us", href: "/why-us" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t border-steel bg-white">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10">
-        <a href="#top" className="mx-auto block w-[min(20vw,400px)] min-w-36">
+        <a href="/" className="mx-auto block w-[min(20vw,400px)] min-w-36">
           <Image
             src="/logo-full.webp"
             alt="D.C.O.C. — Downtown Calgary Office Cleaning"
@@ -20,7 +20,7 @@ export default function Footer() {
             className="h-auto w-full"
           />
         </a>
-        <p className="mt-4 text-sm text-charcoal">
+        <p className="mt-4 text-sm text-navy">
           Downtown Calgary Office Cleaning — nightly janitorial, sanitizing and
           specialty cleaning for offices across the core.
         </p>
@@ -30,7 +30,7 @@ export default function Footer() {
             <a
               key={link.href}
               href={link.href}
-              className="font-heading text-sm font-medium text-charcoal transition-colors hover:text-navy"
+              className="font-heading text-sm font-medium text-navy transition-colors hover:text-navy"
             >
               {link.label}
             </a>
@@ -38,7 +38,7 @@ export default function Footer() {
         </nav>
 
         <div className="mt-12 border-t border-steel pt-6">
-          <p className="text-xs text-charcoal/70">
+          <p className="text-xs text-navy">
             &copy; {new Date().getFullYear()} Downtown Calgary Office Cleaning.
             Serving downtown and surrounding communities.
           </p>
