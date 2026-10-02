@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Rye } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const rye = Rye({
+  variable: "--font-rye",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 const SITE_URL = "https://downtown-calgary-office-cleaning.vercel.app";
@@ -21,6 +27,7 @@ export const metadata: Metadata = {
   },
   description: DESCRIPTION,
   alternates: { canonical: "/" },
+  icons: { icon: "/logo.webp" },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -39,7 +46,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${poppins.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${rye.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col font-sans text-charcoal">
         {children}
       </body>
