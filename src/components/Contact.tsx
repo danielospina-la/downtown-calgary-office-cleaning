@@ -14,7 +14,7 @@ export default function Contact() {
           <h2 className="mt-4 font-heading text-6xl font-extrabold leading-[0.95] tracking-tight text-navy sm:text-7xl">
             Tell us about your space
           </h2>
-          <p className="mt-6 max-w-md text-lg leading-8 text-charcoal">
+          <p className="mt-6 max-w-md text-lg leading-8 text-navy">
             Share a few details and we&apos;ll follow up with a quote built
             around your office and schedule.
           </p>
