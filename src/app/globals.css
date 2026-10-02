@@ -4,11 +4,11 @@
   --background: #ffffff;
   --foreground: #3d3d3d;
 
-  --color-navy: #1b2a4a;
+  --color-navy: #1e5aa8;
   --color-charcoal: #3d3d3d;
-  --color-electric: #2e86ff;
-  --color-light-gray: #f2f3f5;
-  --color-steel: #b8c0cc;
+  --color-electric: #f97316;
+  --color-light-gray: #ffffff;
+  --color-steel: #c9d6ea;
 }
 
 @theme inline {
@@ -20,7 +20,7 @@
   --color-light-gray: var(--color-light-gray);
   --color-steel: var(--color-steel);
   --font-sans: var(--font-poppins);
-  --font-heading: var(--font-poppins);
+  --font-heading: var(--font-rye);
 }
 
 body {
