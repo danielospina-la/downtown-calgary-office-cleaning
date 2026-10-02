@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-steel bg-white">
       <div className="mx-auto max-w-6xl px-6 py-16 sm:px-10">
-        <a href="#top" className="mx-auto block w-1/5 min-w-36">
+        <a href="#top" className="mx-auto block w-[min(20vw,400px)] min-w-36">
           <Image
             src="/logo-full.webp"
             alt="D.C.O.C. — Downtown Calgary Office Cleaning"
