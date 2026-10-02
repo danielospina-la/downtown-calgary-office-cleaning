@@ -55,7 +55,7 @@ function ServiceRow({
 }) {
   return (
     <a
-      href="#contact"
+      href="/contact"
       className="group flex items-center justify-between gap-4 border-b border-steel/60 py-5 first:border-t"
     >
       <span className="flex items-start gap-4">
@@ -64,7 +64,7 @@ function ServiceRow({
           <h3 className="block font-heading text-lg font-semibold text-navy sm:text-xl">
             {name}
           </h3>
-          <span className="mt-1 block text-sm leading-6 text-charcoal">
+          <span className="mt-1 block text-sm leading-6 text-navy">
             {desc}
           </span>
         </span>
@@ -96,7 +96,7 @@ export default function Services() {
         </h2>
 
         <div className="mt-10">
-          <PillCTA label="Not sure what you need?" href="#contact" />
+          <PillCTA label="Not sure what you need?" href="/contact" />
         </div>
 
         <div className="mt-14 max-w-2xl">
@@ -110,7 +110,7 @@ export default function Services() {
         </div>
 
         <div className="mt-12">
-          <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-steel">
+          <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-navy">
             Also Available
           </p>
           <div className="mt-8 max-w-2xl">
