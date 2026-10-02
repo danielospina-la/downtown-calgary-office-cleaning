@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Graduate } from "next/font/google";
+import { Poppins, Oswald } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -8,10 +8,10 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const graduate = Graduate({
-  variable: "--font-graduate",
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["500", "600", "700"],
 });
 
 const SITE_URL = "https://downtown-calgary-office-cleaning.vercel.app";
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${graduate.variable} h-full antialiased`}
+      className={`${poppins.variable} ${oswald.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans text-charcoal">
         {children}
