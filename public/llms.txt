@@ -4,6 +4,14 @@
 > Downtown Calgary and surrounding areas. Insured & bonded. Flexible
 > after-hours scheduling. Free quotes.
 
+## Pages
+
+- Home: https://downtown-calgary-office-cleaning.vercel.app/
+- Services: https://downtown-calgary-office-cleaning.vercel.app/services
+- Areas We Serve: https://downtown-calgary-office-cleaning.vercel.app/areas-we-serve
+- Why Us: https://downtown-calgary-office-cleaning.vercel.app/why-us
+- Contact: https://downtown-calgary-office-cleaning.vercel.app/contact
+
 ## Services
 
 - Nightly Office Cleaning — after-hours janitorial cleaning
@@ -32,4 +40,4 @@ Service area is expanding.
 
 ## Contact
 
-- Get a free quote: https://downtown-calgary-office-cleaning.vercel.app/#contact
+- Get a free quote: https://downtown-calgary-office-cleaning.vercel.app/contact
