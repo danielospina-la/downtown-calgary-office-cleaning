@@ -40,8 +40,8 @@ type PillCTAProps = {
 };
 
 /**
- * Signature CTA: an optional diagonal arrow pointing at a navy pill with an
- * electric-blue circular arrow button. Used across hero and section CTAs.
+ * Signature CTA: an optional diagonal arrow pointing at a blue pill with a
+ * white circular arrow button. Used across hero and section CTAs.
  */
 export default function PillCTA({ label, href, pointer = true }: PillCTAProps) {
   return (
@@ -54,7 +54,7 @@ export default function PillCTA({ label, href, pointer = true }: PillCTAProps) {
         <span className="font-heading text-sm font-medium text-white sm:text-base">
           {label}
         </span>
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-electric text-white transition-colors group-hover:bg-white group-hover:text-navy">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-navy">
           <ArrowRightIcon />
         </span>
       </a>
