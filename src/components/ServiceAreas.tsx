@@ -1,4 +1,23 @@
-import DotRow from "./DotRow";
+function AreaCard({ name, blurb }: { name: string; blurb: string }) {
+  return (
+    <a
+      href="/contact"
+      className="group flex flex-col items-center p-5 text-center sm:p-8"
+    >
+      <img
+        src="/icons/bullet-area-pin.webp"
+        alt=""
+        width={40}
+        height={40}
+        className="h-10 w-10 shrink-0 object-contain"
+      />
+      <h3 className="mt-3 block font-heading text-base font-semibold text-navy sm:text-xl">
+        {name}
+      </h3>
+      <span className="mt-2 block text-sm leading-6 text-navy">{blurb}</span>
+    </a>
+  );
+}
 
 const AREAS: { name: string; blurb: string }[] = [
   {
@@ -55,15 +74,9 @@ export default function ServiceAreas() {
           recurring cleaning for offices in Beltline, Kensington and beyond.
         </p>
 
-        <div className="mt-14 max-w-2xl">
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6">
           {AREAS.map((area) => (
-            <DotRow
-              key={area.name}
-              label={area.name}
-              sublabel={area.blurb}
-              href="/contact"
-              icon="/icons/bullet-area-pin.webp"
-            />
+            <AreaCard key={area.name} name={area.name} blurb={area.blurb} />
           ))}
         </div>
 

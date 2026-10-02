@@ -19,34 +19,21 @@ type DotRowProps = {
   label: string;
   sublabel?: string;
   href?: string;
-  /** Optional custom bullet icon (image src). Falls back to the dot. */
-  icon?: string;
 };
 
 /**
- * Shared "floor directory" row: electric dot (or custom icon) + label
- * (+ optional sublabel) on the left, chevron on the right, hairline
- * divider below. Used across Services, Why Us, and Service Areas for one
- * consistent list style.
+ * Shared "floor directory" row: electric dot + label (+ optional sublabel)
+ * on the left, chevron on the right, hairline divider below.
+ * Used across Services, Why Us, and Service Areas for one consistent list style.
  */
-export default function DotRow({ label, sublabel, href, icon }: DotRowProps) {
+export default function DotRow({ label, sublabel, href }: DotRowProps) {
   const rowClass =
     "group flex items-center justify-between gap-4 border-b border-steel/60 py-5 first:border-t";
 
   const content = (
     <>
       <span className="flex items-start gap-4">
-        {icon ? (
-          <img
-            src={icon}
-            alt=""
-            width={28}
-            height={28}
-            className="mt-0.5 h-7 w-7 shrink-0"
-          />
-        ) : (
-          <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-electric" />
-        )}
+        <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-electric" />
         <span>
           <span className="block font-heading text-lg font-semibold text-navy sm:text-xl">
             {label}
