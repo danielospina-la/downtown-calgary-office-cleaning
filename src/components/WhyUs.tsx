@@ -35,7 +35,7 @@ export default function WhyUs() {
               key={point.title}
               label={point.title}
               sublabel={point.desc}
-              href="#contact"
+              href="/contact"
             />
           ))}
         </div>
