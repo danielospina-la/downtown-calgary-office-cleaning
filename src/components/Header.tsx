@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Services", href: "#services" },
@@ -32,12 +33,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-steel bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
-        <a
-          href="#top"
-          className="font-heading text-lg font-bold tracking-tight text-navy"
-        >
-          Downtown Calgary
-          <span className="text-electric">.</span> Office Cleaning
+        <a href="#top" className="flex items-center gap-3">
+          <Image
+            src="/logo.webp"
+            alt="D.C.O.C. — Downtown Calgary Office Cleaning"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-full"
+            priority
+          />
+          <span className="font-heading text-xl tracking-tight text-navy">
+            D.C.O.C.
+          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -52,15 +59,15 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA: navy pill + electric arrow */}
+        {/* Desktop CTA */}
         <a
           href="#contact"
-          className="group hidden items-center gap-3 rounded-full bg-navy py-1.5 pr-1.5 pl-5 md:flex"
+          className="group hidden items-center gap-3 rounded-full bg-electric py-1.5 pr-1.5 pl-5 md:flex"
         >
           <span className="font-heading text-sm font-medium text-white">
             Get a Quote
           </span>
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-electric text-white transition-colors group-hover:bg-white group-hover:text-navy">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-electric transition-colors group-hover:bg-navy group-hover:text-white">
             <ArrowRightIcon />
           </span>
         </a>
@@ -108,7 +115,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-navy py-3 text-center font-heading text-sm font-semibold text-white"
+              className="mt-4 rounded-full bg-electric py-3 text-center font-heading text-sm font-semibold text-white"
             >
               Get a Quote
             </a>
