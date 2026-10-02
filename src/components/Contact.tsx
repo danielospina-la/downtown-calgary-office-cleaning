@@ -2,16 +2,19 @@ import ContactForm from "./ContactForm";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-navy py-24 sm:py-32">
+    <section
+      id="contact"
+      className="border-t border-steel bg-white py-24 sm:py-32"
+    >
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-14 px-6 sm:px-10 md:grid-cols-2 md:gap-8">
         <div>
           <p className="font-heading text-sm font-semibold uppercase tracking-[0.2em] text-electric">
             Get a Quote
           </p>
-          <h2 className="mt-4 font-heading text-6xl font-extrabold leading-[0.95] tracking-tight text-white sm:text-7xl">
+          <h2 className="mt-4 font-heading text-6xl font-extrabold leading-[0.95] tracking-tight text-navy sm:text-7xl">
             Tell us about your space
           </h2>
-          <p className="mt-6 max-w-md text-lg leading-8 text-steel">
+          <p className="mt-6 max-w-md text-lg leading-8 text-charcoal">
             Share a few details and we&apos;ll follow up with a quote built
             around your office and schedule.
           </p>
