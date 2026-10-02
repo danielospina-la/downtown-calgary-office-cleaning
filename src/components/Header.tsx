@@ -33,18 +33,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-steel bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
-        <a href="#top" className="flex items-center gap-3">
+        <a href="#top" className="flex items-center">
           <Image
-            src="/logo.webp"
-            alt="D.C.O.C. — Downtown Calgary Office Cleaning"
-            width={44}
-            height={44}
-            className="h-11 w-11 rounded-full"
+            src="/logo-navbar.webp"
+            alt="Downtown Calgary Office Cleaning"
+            width={264}
+            height={86}
+            className="h-12 w-auto"
             priority
           />
-          <span className="font-heading text-xl tracking-tight text-navy">
-            D.C.O.C.
-          </span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
