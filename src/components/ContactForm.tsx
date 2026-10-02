@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import VintageButton from "./VintageButton";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -75,29 +76,11 @@ export default function ContactForm() {
       {/* Honeypot field to reduce spam */}
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
 
-      <button
-        type="submit"
-        disabled={status === "submitting"}
-        className="group mt-2 flex items-center justify-between gap-6 rounded-full bg-accent py-2 pr-2 pl-6 transition-colors hover:bg-navy disabled:opacity-60"
-      >
-        <span className="font-heading text-sm font-semibold text-white sm:text-base">
+      <div className="mt-2">
+        <VintageButton submit color="orange" disabled={status === "submitting"}>
           {status === "submitting" ? "Sending..." : "Request a Quote"}
-        </span>
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-accent transition-colors group-hover:bg-white group-hover:text-navy">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="h-4 w-4"
-            aria-hidden="true"
-          >
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
-        </span>
-      </button>
+        </VintageButton>
+      </div>
 
       {status === "success" && (
         <p className="text-sm font-medium text-green-700">

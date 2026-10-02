@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import VintageButton from "./VintageButton";
 
 const NAV_LINKS = [
   { label: "Services", href: "/services" },
@@ -9,23 +10,6 @@ const NAV_LINKS = [
   { label: "Why Us", href: "/why-us" },
   { label: "Contact", href: "/contact" },
 ];
-
-function ArrowRightIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4"
-      aria-hidden="true"
-    >
-      <path d="M5 12h14M13 6l6 6-6 6" />
-    </svg>
-  );
-}
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -57,17 +41,11 @@ export default function Header() {
         </nav>
 
         {/* Desktop CTA */}
-        <a
-          href="/contact"
-          className="hidden items-center gap-3 rounded-full bg-navy py-1.5 pr-1.5 pl-5 transition-colors hover:bg-navy/90 md:flex"
-        >
-          <span className="font-heading text-sm font-medium text-white">
+        <div className="hidden md:block">
+          <VintageButton href="/contact" size="sm">
             Get a Quote
-          </span>
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-navy">
-            <ArrowRightIcon />
-          </span>
-        </a>
+          </VintageButton>
+        </div>
 
         {/* Mobile menu toggle */}
         <button
@@ -109,13 +87,14 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="/contact"
+            <div
+              className="mt-4 flex justify-center"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-navy py-3 text-center font-heading text-sm font-semibold text-white"
             >
-              Get a Quote
-            </a>
+              <VintageButton href="/contact" size="sm">
+                Get a Quote
+              </VintageButton>
+            </div>
           </nav>
         </div>
       )}

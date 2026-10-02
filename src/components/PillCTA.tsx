@@ -1,3 +1,5 @@
+import VintageButton from "./VintageButton";
+
 function DiagonalArrowIcon() {
   return (
     <svg
@@ -15,49 +17,22 @@ function DiagonalArrowIcon() {
   );
 }
 
-function ArrowRightIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4"
-      aria-hidden="true"
-    >
-      <path d="M5 12h14M13 6l6 6-6 6" />
-    </svg>
-  );
-}
-
 type PillCTAProps = {
   label: string;
   href: string;
-  /** Show the diagonal arrow pointer to the left of the pill. */
+  /** Show the diagonal arrow pointer to the left of the button. */
   pointer?: boolean;
 };
 
 /**
- * Signature CTA: an optional diagonal arrow pointing at a blue pill with a
- * white circular arrow button. Used across hero and section CTAs.
+ * Signature CTA: an optional diagonal arrow pointing at a vintage tag
+ * button. Used across hero and section CTAs.
  */
 export default function PillCTA({ label, href, pointer = true }: PillCTAProps) {
   return (
     <div className="flex items-center gap-4">
       {pointer && <DiagonalArrowIcon />}
-      <a
-        href={href}
-        className="group flex w-full max-w-md items-center justify-between gap-6 rounded-full bg-navy py-2 pr-2 pl-6 transition-colors hover:bg-navy/90"
-      >
-        <span className="font-heading text-sm font-medium text-white sm:text-base">
-          {label}
-        </span>
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-navy">
-          <ArrowRightIcon />
-        </span>
-      </a>
+      <VintageButton href={href}>{label}</VintageButton>
     </div>
   );
 }
