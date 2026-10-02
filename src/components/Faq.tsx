@@ -58,7 +58,7 @@ export default function Faq() {
               <h3 className="font-heading text-lg font-semibold text-navy sm:text-xl">
                 {faq.q}
               </h3>
-              <p className="mt-2 leading-7 text-charcoal">{faq.a}</p>
+              <p className="mt-2 leading-7 text-navy">{faq.a}</p>
             </div>
           ))}
         </div>
