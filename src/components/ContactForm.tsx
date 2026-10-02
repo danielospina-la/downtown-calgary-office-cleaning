@@ -4,6 +4,9 @@ import { useState } from "react";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+const inputClass =
+  "rounded-2xl border border-steel bg-white px-5 py-3.5 font-heading text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none";
+
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
 
@@ -47,27 +50,27 @@ export default function ContactForm() {
         name="name"
         placeholder="Your name"
         required
-        className="rounded-2xl border border-transparent bg-white px-5 py-3.5 font-heading text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none"
+        className={inputClass}
       />
       <input
         type="email"
         name="email"
         placeholder="Your email"
         required
-        className="rounded-2xl border border-transparent bg-white px-5 py-3.5 font-heading text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none"
+        className={inputClass}
       />
       <input
         type="tel"
         name="phone"
         placeholder="Phone (optional)"
-        className="rounded-2xl border border-transparent bg-white px-5 py-3.5 font-heading text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none"
+        className={inputClass}
       />
       <textarea
         name="message"
         placeholder="Tell us about your office and cleaning needs"
         required
         rows={4}
-        className="rounded-2xl border border-transparent bg-white px-5 py-3.5 font-heading text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none"
+        className={inputClass}
       />
       {/* Honeypot field to reduce spam */}
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} autoComplete="off" />
@@ -75,12 +78,12 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="group mt-2 flex items-center justify-between gap-6 rounded-full bg-electric py-2 pr-2 pl-6 transition-colors hover:bg-white disabled:opacity-60"
+        className="group mt-2 flex items-center justify-between gap-6 rounded-full bg-electric py-2 pr-2 pl-6 transition-colors hover:bg-navy disabled:opacity-60"
       >
-        <span className="font-heading text-sm font-semibold text-white transition-colors group-hover:text-navy sm:text-base">
+        <span className="font-heading text-sm font-semibold text-white sm:text-base">
           {status === "submitting" ? "Sending..." : "Request a Quote"}
         </span>
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-navy transition-colors group-hover:bg-electric group-hover:text-white">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-electric transition-colors group-hover:bg-white group-hover:text-navy">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -97,12 +100,12 @@ export default function ContactForm() {
       </button>
 
       {status === "success" && (
-        <p className="text-sm font-medium text-white">
+        <p className="text-sm font-medium text-green-700">
           Thanks! We&apos;ll be in touch shortly.
         </p>
       )}
       {status === "error" && (
-        <p className="text-sm font-medium text-white">
+        <p className="text-sm font-medium text-red-600">
           Something went wrong. Please try again or reach out directly.
         </p>
       )}
