@@ -49,7 +49,7 @@ export default function ServiceAreas() {
           Serve
         </h2>
 
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-charcoal">
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-navy">
           We provide office cleaning across Downtown Calgary and nearby
           neighbourhoods — from nightly janitorial in the Downtown Core to
           recurring cleaning for offices in Beltline, Kensington and beyond.
@@ -61,14 +61,14 @@ export default function ServiceAreas() {
               key={area.name}
               label={area.name}
               sublabel={area.blurb}
-              href="#contact"
+              href="/contact"
             />
           ))}
         </div>
 
-        <p className="mt-8 text-sm text-charcoal">
+        <p className="mt-8 text-sm text-navy">
           Don&apos;t see your neighborhood?{" "}
-          <a href="#contact" className="font-medium text-electric">
+          <a href="/contact" className="font-medium text-electric">
             Ask us
           </a>{" "}
           &mdash; we&apos;re expanding our service area regularly.
