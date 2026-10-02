@@ -39,7 +39,7 @@ export default function DotRow({ label, sublabel, href }: DotRowProps) {
             {label}
           </span>
           {sublabel && (
-            <span className="mt-1 block text-sm leading-6 text-charcoal">
+            <span className="mt-1 block text-sm leading-6 text-navy">
               {sublabel}
             </span>
           )}
