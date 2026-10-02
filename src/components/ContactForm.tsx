@@ -5,7 +5,7 @@ import { useState } from "react";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const inputClass =
-  "rounded-2xl border border-steel bg-white px-5 py-3.5 font-heading text-charcoal placeholder:text-charcoal/50 focus:border-electric focus:outline-none";
+  "rounded-2xl border border-steel bg-white px-5 py-3.5 font-heading text-navy placeholder:text-navy/50 focus:border-electric focus:outline-none";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
