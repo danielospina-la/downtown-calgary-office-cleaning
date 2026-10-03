@@ -1,4 +1,6 @@
-const FAQS: { q: string; a: string }[] = [
+export type FaqItem = { q: string; a: string };
+
+const DEFAULT_FAQS: FaqItem[] = [
   {
     q: "What office cleaning services do you offer in Calgary?",
     a: "We offer nightly office cleaning, trash and recycling removal, kitchen and breakroom cleaning, restroom cleaning and sanitizing, vacuuming and floor mopping, dusting and surface wiping, and high-touch disinfection. Specialty services include carpet cleaning, window washing, and post-construction cleanup.",
@@ -25,17 +27,17 @@ const FAQS: { q: string; a: string }[] = [
   },
 ];
 
-const faqJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQS.map((faq) => ({
-    "@type": "Question",
-    name: faq.q,
-    acceptedAnswer: { "@type": "Answer", text: faq.a },
-  })),
-};
+export default function Faq({ items = DEFAULT_FAQS }: { items?: FaqItem[] }) {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
 
-export default function Faq() {
   return (
     <section id="faq" className="bg-white py-24 sm:py-32">
       <script
@@ -50,7 +52,7 @@ export default function Faq() {
         </h2>
 
         <div className="mt-14 max-w-2xl">
-          {FAQS.map((faq) => (
+          {items.map((faq) => (
             <div
               key={faq.q}
               className="border-b border-steel/60 py-6 first:border-t"

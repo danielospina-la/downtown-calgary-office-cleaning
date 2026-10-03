@@ -13,18 +13,22 @@ const businessJsonLd = {
   description:
     "Nightly janitorial, sanitizing and specialty office cleaning for offices in Downtown Calgary and surrounding areas. Insured and bonded, with flexible after-hours scheduling.",
   areaServed: [
-    "Downtown Calgary",
-    "Downtown Core",
-    "Beltline",
-    "Eau Claire",
-    "East Village",
-    "Mission",
-    "Kensington",
-    "Hillhurst",
-    "Inglewood",
-    "Chinatown",
-    "Bridgeland",
-    "Calgary, AB",
+    { "@type": "City", name: "Calgary, AB" },
+    ...[
+      "Downtown Core",
+      "Beltline",
+      "Eau Claire",
+      "East Village",
+      "Mission",
+      "Kensington",
+      "Hillhurst",
+      "Inglewood",
+      "Chinatown",
+      "Bridgeland",
+    ].map((neighbourhood) => ({
+      "@type": "Place",
+      name: `${neighbourhood}, Calgary, AB`,
+    })),
   ],
 };
 
