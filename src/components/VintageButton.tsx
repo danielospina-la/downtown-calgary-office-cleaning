@@ -11,7 +11,7 @@ type VintageButtonProps = {
   color?: keyof typeof COLORS;
   size?: "sm" | "md";
   className?: string;
-} & ({ href: string } | { submit: true; disabled?: boolean });
+} & ({ href: string } | { submit: true; disabled?: boolean } | { onClick: () => void });
 
 /**
  * Vintage tag button: elongated hexagonal tag with pointed ends, a dashed
@@ -60,6 +60,13 @@ export default function VintageButton(props: VintageButtonProps) {
         className={`${cls} disabled:opacity-60 disabled:hover:scale-100`}
         style={style}
       >
+        {inner}
+      </button>
+    );
+  }
+  if ("onClick" in props) {
+    return (
+      <button type="button" onClick={props.onClick} className={cls} style={style}>
         {inner}
       </button>
     );

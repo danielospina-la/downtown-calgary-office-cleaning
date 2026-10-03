@@ -1,7 +1,13 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import PillCTA from "./PillCTA";
+import QuoteCalculator from "./QuoteCalculator";
+import VintageButton from "./VintageButton";
 
 export default function Hero() {
+  const [calcOpen, setCalcOpen] = useState(false);
   return (
     <section id="top" className="border-b border-steel bg-white">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 pt-14 pb-20 sm:px-10 md:grid-cols-2 md:gap-12 md:pt-20 md:pb-28">
@@ -27,9 +33,13 @@ export default function Hero() {
             across the core &mdash; reliable, insured, and built around your
             schedule.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-wrap items-center gap-4">
             <PillCTA label="Get a free quote" href="/contact" />
+            <VintageButton onClick={() => setCalcOpen(true)}>
+              Calculate your cost
+            </VintageButton>
           </div>
+          <QuoteCalculator open={calcOpen} onClose={() => setCalcOpen(false)} />
         </div>
       </div>
     </section>
