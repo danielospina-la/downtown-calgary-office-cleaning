@@ -88,7 +88,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <section className="bg-light-gray py-24 sm:py-32">
+        <section className="bg-[#d9e8f8] py-24 sm:py-32">
           <div className="mx-auto max-w-6xl px-6 sm:px-10">
             <h2 className="font-heading text-5xl font-extrabold tracking-tight text-navy sm:text-6xl">
               Explore

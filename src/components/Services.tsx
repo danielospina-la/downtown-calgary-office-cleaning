@@ -131,7 +131,7 @@ export default function Services() {
           Services
         </h2>
 
-        <div className="mt-10">
+        <div className="mt-10 flex justify-center md:justify-start">
           <PillCTA label="Not sure what you need?" href="/contact" />
         </div>
 

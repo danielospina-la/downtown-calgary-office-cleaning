@@ -1,7 +1,20 @@
+"use client";
+
+import { useState } from "react";
+
 const COLORS = {
   blue: "#1e5aa8",
+  bright: "#2f6dc2",
+  navy: "#123c6e",
   orange: "#f97316",
 } as const;
+
+const HOVER: Record<keyof typeof COLORS, string> = {
+  blue: "#123c6e",
+  bright: "#1e5aa8",
+  navy: "#0d2a4f",
+  orange: "#d96a0e",
+};
 
 const CLIP =
   "polygon(7% 0, 93% 0, 100% 50%, 93% 100%, 7% 100%, 0 50%)";
@@ -20,8 +33,13 @@ type VintageButtonProps = {
  */
 export default function VintageButton(props: VintageButtonProps) {
   const { children, color = "blue", size = "md", className = "" } = props;
-  const bg = COLORS[color];
+  const [hovered, setHovered] = useState(false);
+  const bg = hovered ? HOVER[color] : COLORS[color];
   const pad = size === "sm" ? "px-7 py-2.5" : "px-10 py-4";
+  const hoverHandlers = {
+    onMouseEnter: () => setHovered(true),
+    onMouseLeave: () => setHovered(false),
+  };
 
   const inner = (
     <>
@@ -49,7 +67,7 @@ export default function VintageButton(props: VintageButtonProps) {
     </>
   );
 
-  const cls = `relative inline-flex items-center justify-center ${pad} transition-transform hover:scale-[1.03] active:scale-[0.98] ${className}`;
+  const cls = `relative inline-flex items-center justify-center ${pad} transition-all hover:scale-[1.03] active:scale-[0.98] ${className}`;
   const style = { clipPath: CLIP, backgroundColor: bg };
 
   if ("submit" in props) {
@@ -59,6 +77,7 @@ export default function VintageButton(props: VintageButtonProps) {
         disabled={props.disabled}
         className={`${cls} disabled:opacity-60 disabled:hover:scale-100`}
         style={style}
+        {...hoverHandlers}
       >
         {inner}
       </button>
@@ -66,13 +85,13 @@ export default function VintageButton(props: VintageButtonProps) {
   }
   if ("onClick" in props) {
     return (
-      <button type="button" onClick={props.onClick} className={cls} style={style}>
+      <button type="button" onClick={props.onClick} className={cls} style={style} {...hoverHandlers}>
         {inner}
       </button>
     );
   }
   return (
-    <a href={props.href} className={cls} style={style}>
+    <a href={props.href} className={cls} style={style} {...hoverHandlers}>
       {inner}
     </a>
   );

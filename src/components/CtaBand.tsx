@@ -11,7 +11,7 @@ export default function CtaBand() {
         <p className="mt-4 max-w-xl text-lg leading-8 text-navy">
           Get a free quote built around your office and your schedule.
         </p>
-        <div className="mt-8">
+        <div className="mt-8 flex justify-center md:justify-start">
           <PillCTA label="Get a free quote" href="/contact" />
         </div>
       </div>

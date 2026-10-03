@@ -33,9 +33,9 @@ export default function Hero() {
             across the core &mdash; reliable, insured, and built around your
             schedule.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 md:justify-start">
             <PillCTA label="Get a free quote" href="/contact" />
-            <VintageButton onClick={() => setCalcOpen(true)}>
+            <VintageButton onClick={() => setCalcOpen(true)} color="bright">
               Calculate your cost
             </VintageButton>
           </div>
