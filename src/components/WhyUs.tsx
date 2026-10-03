@@ -24,9 +24,7 @@ export default function WhyUs() {
     <section id="why-us" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <h2 className="font-heading text-6xl font-bold leading-[0.95] tracking-tight text-navy sm:text-7xl">
-          Why
-          <br />
-          Us
+          Why Us
         </h2>
 
         <div className="mt-14 max-w-2xl">
