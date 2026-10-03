@@ -93,7 +93,7 @@ export default function Header() {
             >
               <VintageButton href="/contact" size="sm">
                 Get a Quote
-              </intageButton>
+              </VintageButton>
             </div>
           </nav>
         </div>
