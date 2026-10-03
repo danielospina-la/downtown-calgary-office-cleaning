@@ -58,7 +58,7 @@ function TeaserCard({
   return (
     <a
       href={href}
-      className="group flex flex-col rounded-3xl bg-white p-8 transition-colors"
+      className="group flex flex-col rounded-[3px] bg-white p-8 transition-colors"
     >
       <h2 className="font-heading text-3xl font-bold tracking-tight text-navy">
         {title}

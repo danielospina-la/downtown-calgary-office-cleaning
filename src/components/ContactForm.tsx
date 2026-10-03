@@ -6,7 +6,7 @@ import VintageButton from "./VintageButton";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const inputClass =
-  "rounded-2xl border border-steel bg-white px-5 py-3.5 font-heading text-navy placeholder:text-navy/50 focus:border-electric focus:outline-none";
+  "rounded-[3px] border border-steel bg-white px-5 py-3.5 font-heading text-navy placeholder:text-navy/50 focus:border-electric focus:outline-none";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
