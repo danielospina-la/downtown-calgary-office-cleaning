@@ -73,10 +73,10 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu panel */}
+      {/* Mobile menu panel — fixed dropdown below the header bar */}
       {open && (
-        <div className="border-t border-steel bg-white md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col px-6 py-4">
+        <div className="fixed inset-x-0 top-[80px] z-40 border-t border-steel bg-white shadow-xl md:hidden">
+          <nav className="mx-auto flex max-h-[calc(100dvh-80px)] max-w-6xl flex-col overflow-y-auto px-6 py-4">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
@@ -88,12 +88,12 @@ export default function Header() {
               </a>
             ))}
             <div
-              className="mt-4 flex justify-center"
+              className="mt-4 flex justify-center pb-2"
               onClick={() => setOpen(false)}
             >
               <VintageButton href="/contact" size="sm">
                 Get a Quote
-              </VintageButton>
+              </intageButton>
             </div>
           </nav>
         </div>
