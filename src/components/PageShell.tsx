@@ -21,7 +21,7 @@ export default function PageShell({
           src={bgImage}
           alt=""
           aria-hidden="true"
-          className="pointer-events-none absolute right-0 bottom-0 z-0 w-64 select-none opacity-[0.07] sm:w-80 lg:w-96"
+          className="pointer-events-none absolute right-0 bottom-0 z-20 w-64 select-none opacity-[0.08] sm:w-80 lg:w-96"
         />
       )}
       <div className="relative z-10 flex flex-1 flex-col">
