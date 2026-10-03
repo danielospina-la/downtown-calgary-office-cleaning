@@ -5,12 +5,14 @@ import Image from "next/image";
 import PillCTA from "./PillCTA";
 import QuoteCalculator from "./QuoteCalculator";
 import VintageButton from "./VintageButton";
+import HeroSweep from "./HeroSweep";
 
 export default function Hero() {
   const [calcOpen, setCalcOpen] = useState(false);
   return (
-    <section id="top" className="border-b border-steel bg-white">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 pt-14 pb-20 sm:px-10 md:grid-cols-2 md:gap-12 md:pt-20 md:pb-28">
+    <section id="top" className="relative overflow-hidden border-b border-steel bg-white">
+      <HeroSweep />
+      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 pt-14 pb-20 sm:px-10 md:grid-cols-2 md:gap-12 md:pt-20 md:pb-28">
         <div className="order-1 md:order-2">
           <Image
             src="/logo-full.webp"
