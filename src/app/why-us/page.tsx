@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function WhyUsPage() {
   return (
-    <PageShell>
+    <PageShell bgImage="/backgrounds/cleaner-whyus.webp">
       <WhyUs />
       <CtaBand />
     </PageShell>

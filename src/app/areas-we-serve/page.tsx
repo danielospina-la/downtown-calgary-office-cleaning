@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function AreasPage() {
   return (
-    <PageShell>
+    <PageShell bgImage="/backgrounds/cleaner-areas.webp">
       <ServiceAreas />
       <CtaBand />
     </PageShell>

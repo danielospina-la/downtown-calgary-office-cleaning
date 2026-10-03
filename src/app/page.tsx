@@ -73,11 +73,18 @@ function TeaserCard({
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col">
+    <div className="relative flex flex-1 flex-col overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
       />
+      <img
+        src="/backgrounds/cleaner-home.webp"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 bottom-0 z-0 w-64 select-none opacity-[0.07] sm:w-80 lg:w-96"
+      />
+      <div className="relative z-10 flex flex-1 flex-col">
       <Header />
       <main className="flex-1">
         <Hero />
@@ -96,6 +103,7 @@ export default function Home() {
         <CtaBand />
       </main>
       <Footer />
+      </div>
     </div>
   );
 }

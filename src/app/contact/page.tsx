@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <PageShell>
+    <PageShell bgImage="/backgrounds/cleaner-contact.webp">
       <Contact />
       <Faq />
     </PageShell>
