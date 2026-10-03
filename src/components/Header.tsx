@@ -15,7 +15,8 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-steel bg-white">
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-steel bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-10">
         <a href="/" className="flex items-center">
           <Image
@@ -99,5 +100,8 @@ export default function Header() {
         </div>
       )}
     </header>
+    {/* Spacer so page content starts below the fixed header */}
+    <div className="h-20" aria-hidden="true" />
+    </>
   );
 }
