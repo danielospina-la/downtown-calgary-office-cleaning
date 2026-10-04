@@ -17,16 +17,18 @@ export default function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    formData.append(
-      "access_key",
-      process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? ""
-    );
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData,
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+          botcheck: formData.get("botcheck"),
+        }),
       });
       const result = await res.json();
 
