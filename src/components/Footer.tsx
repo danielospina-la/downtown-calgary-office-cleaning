@@ -24,6 +24,14 @@ export default function Footer() {
           Downtown Calgary Office Cleaning — nightly janitorial, sanitizing and
           specialty cleaning for offices across the core.
         </p>
+        <p className="mt-3 text-sm text-navy">
+          <a
+            href="mailto:info@dcoc.ca"
+            className="font-semibold underline-offset-4 hover:underline"
+          >
+            info@dcoc.ca
+          </a>
+        </p>
 
         <nav className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
           {NAV_LINKS.map((link) => (

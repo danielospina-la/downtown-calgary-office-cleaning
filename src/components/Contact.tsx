@@ -18,6 +18,16 @@ export default function Contact() {
             Share a few details and we&apos;ll follow up with a quote built
             around your office and schedule.
           </p>
+          <p className="mt-6 max-w-md text-lg leading-8 text-navy">
+            Prefer email? Write to us at{" "}
+            <a
+              href="mailto:info@dcoc.ca"
+              className="font-semibold underline underline-offset-4"
+            >
+              info@dcoc.ca
+            </a>
+            .
+          </p>
         </div>
 
         <ContactForm />

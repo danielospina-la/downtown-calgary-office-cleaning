@@ -10,6 +10,7 @@ const businessJsonLd = {
   "@type": "CleaningService",
   name: "Downtown Calgary Office Cleaning",
   url: SITE_URL,
+  email: "info@dcoc.ca",
   description:
     "Nightly janitorial, sanitizing and specialty office cleaning for offices in Downtown Calgary and surrounding areas. Insured and bonded, with flexible after-hours scheduling.",
   areaServed: [
