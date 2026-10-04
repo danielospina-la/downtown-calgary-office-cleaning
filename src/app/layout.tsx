@@ -14,7 +14,7 @@ const oswald = Oswald({
   weight: ["500", "600", "700"],
 });
 
-const SITE_URL = "https://downtown-calgary-office-cleaning.vercel.app";
+const SITE_URL = "https://dcoc.ca";
 const TITLE = "Office Cleaning Services in Downtown Calgary | Free Quotes";
 const DESCRIPTION =
   "Nightly janitorial, sanitizing & specialty office cleaning in Downtown Calgary. Insured & bonded, flexible after-hours scheduling. Get a free quote today.";

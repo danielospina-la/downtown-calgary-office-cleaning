@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = "https://downtown-calgary-office-cleaning.vercel.app";
+const SITE_URL = "https://dcoc.ca";
 
 const PAGES: { path: string; priority: number }[] = [
   { path: "/", priority: 1 },

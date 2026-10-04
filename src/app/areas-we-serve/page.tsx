@@ -3,7 +3,7 @@ import PageShell from "@/components/PageShell";
 import ServiceAreas from "@/components/ServiceAreas";
 import CtaBand from "@/components/CtaBand";
 
-const SITE_URL = "https://downtown-calgary-office-cleaning.vercel.app";
+const SITE_URL = "https://dcoc.ca";
 const TITLE = "Office Cleaning Areas in Calgary | Beltline, Eau Claire";
 const DESCRIPTION =
   "Office cleaning in Downtown Calgary, Beltline, Eau Claire, East Village, Mission & more. Insured, after-hours service. Get a free quote.";

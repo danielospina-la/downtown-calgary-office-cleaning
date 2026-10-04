@@ -6,11 +6,11 @@
 
 ## Pages
 
-- Home: https://downtown-calgary-office-cleaning.vercel.app/
-- Services: https://downtown-calgary-office-cleaning.vercel.app/services
-- Areas We Serve: https://downtown-calgary-office-cleaning.vercel.app/areas-we-serve
-- Why Us: https://downtown-calgary-office-cleaning.vercel.app/why-us
-- Contact: https://downtown-calgary-office-cleaning.vercel.app/contact
+- Home: https://dcoc.ca/
+- Services: https://dcoc.ca/services
+- Areas We Serve: https://dcoc.ca/areas-we-serve
+- Why Us: https://dcoc.ca/why-us
+- Contact: https://dcoc.ca/contact
 
 ## Services
 
@@ -40,4 +40,4 @@ Service area is expanding.
 
 ## Contact
 
-- Get a free quote: https://downtown-calgary-office-cleaning.vercel.app/contact
+- Get a free quote: https://dcoc.ca/contact

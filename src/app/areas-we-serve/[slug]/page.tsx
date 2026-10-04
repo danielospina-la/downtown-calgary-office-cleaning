@@ -6,7 +6,7 @@ import Faq from "@/components/Faq";
 import VintageButton from "@/components/VintageButton";
 import { getAreaGuide, AREA_SLUGS } from "../guides";
 
-const SITE_URL = "https://downtown-calgary-office-cleaning.vercel.app";
+const SITE_URL = "https://dcoc.ca";
 
 export function generateStaticParams() {
   return AREA_SLUGS.map((slug) => ({ slug }));

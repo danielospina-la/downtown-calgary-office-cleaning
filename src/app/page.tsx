@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import CtaBand from "@/components/CtaBand";
 
-const SITE_URL = "https://downtown-calgary-office-cleaning.vercel.app";
+const SITE_URL = "https://dcoc.ca";
 
 const businessJsonLd = {
   "@context": "https://schema.org",
